@@ -7,6 +7,47 @@
     <groupId>Wpacking</groupId>
     <artifactId>Wpacking-root</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>Wpacking-WMS</module>
+    </modules>
+
+    <properties>
+        <springframework-version>5.0.1.RELEASE</springframework-version>
+        <java-version>1.8</java-version>
+    </properties>
+
+<!--    스프링 영문자료 : https://docs.spring.io/spring/docs/4.3.12.RELEASE/spring-framework-reference/htmlsingle/-->
+<!--    이거 보고 정리해야함-->
+
+    <dependencies>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${springframework-version}</version>
+        <scope>compile</scope>
+    </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${springframework-version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework-version}</version>
+            <scope>compile</scope>
+            <exclusions>
+                <!-- Exclude Commons Logging in favor of SLF4j -->
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 
 
 </project>
