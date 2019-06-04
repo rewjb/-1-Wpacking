@@ -11,6 +11,7 @@
 
     <modules>
         <module>Wpacking-WMS</module>
+        <module>Wpacking-CORE</module>
     </modules>
 
     <properties>
@@ -21,13 +22,18 @@
 <!--    스프링 영문자료 : https://docs.spring.io/spring/docs/4.3.12.RELEASE/spring-framework-reference/htmlsingle/-->
 <!--    이거 보고 정리해야함-->
 
+<!--    Spring Project에서 spring 관련 Maven-->
+<!--    spring-context , spring-webmvc-->
+
+<!--    pntbiz 공통 spring 관련 Maven-->
+<!--    spring-core , spring-beans , spring-context , spring-test-->
     <dependencies>
         <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
         <version>${springframework-version}</version>
         <scope>compile</scope>
-    </dependency>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
@@ -52,9 +58,15 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${springframework-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${springframework-version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-</project>
 
-dddddddddddddddddddddddddd
+
+</project>
 
 

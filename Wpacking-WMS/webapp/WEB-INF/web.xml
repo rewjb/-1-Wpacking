@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:contextConfigLocation.xml,
+            classpath:contextConfigLocation_mongo.xml
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+<!--    ContextLoaderListener 와 DispatcherServlet은 각각 WebApplicationContext 인스턴스를 생성하게 되는데,-->
+<!--    ContextLoaderListener 가 생성한 컨텍스트가 root컨텍스트가 되고, DispatcherServlet이 생성한 인스턴스는-->
+<!--    root컨텍스트를 부모로 사용하는 자식 컨텍스트가 된다.-->
+<!--    ContextLoaderListener는 인터페이스인 ServletContextListener를 구현하였으며 ApplicationContext를 생성하는 역할을 수행한다.-->
+
+
+
+
+
+
+
+</web-app>
