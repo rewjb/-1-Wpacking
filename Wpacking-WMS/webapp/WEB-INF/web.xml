@@ -7,11 +7,10 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            classpath:contextConfigLocation.xml,
-            classpath:contextConfigLocation_mongo.xml
+            classpath:spring/spring-config.xml
         </param-value>
     </context-param>
-
+유주빈
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -21,6 +20,20 @@
 <!--    root컨텍스트를 부모로 사용하는 자식 컨텍스트가 된다.-->
 <!--    ContextLoaderListener는 인터페이스인 ServletContextListener를 구현하였으며 ApplicationContext를 생성하는 역할을 수행한다.-->
 
+    <servlet>
+        <servlet-name>appServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-config.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
 
 
